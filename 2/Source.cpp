@@ -1,6 +1,7 @@
 ﻿#include<stdio.h>
-#include<Windows.h>
 #include<tchar.h>
+#include<Windows.h>
+#include <locale.h>
 
 void TrimStr(TCHAR *strInput, TCHAR *strOutput)
 {
@@ -47,6 +48,7 @@ void TrimStr(TCHAR *strInput, TCHAR *strOutput)
 
 void main()
 {
+	setlocale(LC_CTYPE, "");   //设置字符编码未当前系统编码格式
 	TCHAR strInput[MAX_PATH] = { 0 };
 	TCHAR strOutput[MAX_PATH] = { 0 };
 	_tprintf(_T("input a string:"));

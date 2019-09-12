@@ -1,4 +1,6 @@
 ﻿#include<stdio.h>
+#include<Windows.h>
+#include <locale.h>
 
 void GetCount(int Num, float pOutput[])
 {
@@ -31,6 +33,7 @@ void GetCount(int Num, float pOutput[])
 }
 void main()
 {
+	setlocale(LC_CTYPE, "");   //设置字符编码未当前系统编码格式
 	float pNumber[2] = { 0 };
 	int Number = 0;
 	printf("请输入一个1~20之间的整数：");
